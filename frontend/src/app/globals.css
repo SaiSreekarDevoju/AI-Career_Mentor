@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+@theme inline {
+  --color-background: #070708;
+  --color-foreground: #f8fafc;
+  --color-card: #12121a;
+  --color-popover: #16161f;
+  --color-muted: #181822;
+  --color-muted-foreground: #a1a1aa;
+  --color-input: #0f0f14;
+  --color-sidebar: #0c0c10;
+  --color-navbar: #0c0c10;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-ring: rgba(79, 70, 229, 0.55);
+  --color-primary: #4f46e5;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1e1e2e;
+  --color-secondary-foreground: #a1a1aa;
+  --color-accent: #8b5cf6;
+  --color-accent-foreground: #ffffff;
+  --color-glass: rgba(18, 18, 26, 0.92);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-wave: wave 2.5s infinite;
+  --animate-gradient: gradient 8s linear infinite;
+
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+html.light {
+  color-scheme: light;
+  --color-background: #f4f6fb;
+  --color-foreground: #0f172a;
+  --color-card: #ffffff;
+  --color-popover: #ffffff;
+  --color-muted: #eef1f7;
+  --color-muted-foreground: #475569;
+  --color-input: #ffffff;
+  --color-sidebar: #f8fafc;
+  --color-navbar: #f8fafc;
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-ring: rgba(79, 70, 229, 0.45);
+  --color-secondary: #e8ecf4;
+  --color-secondary-foreground: #475569;
+  --color-glass: #ffffff;
+  --color-glass-border: rgba(15, 23, 42, 0.12);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+html.light .glass-panel {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+/* Solid surfaces (dashboard shell) */
+.surface-sidebar {
+  background: var(--color-sidebar);
+  color: var(--color-foreground);
+  border-color: var(--color-border);
+}
+
+.surface-navbar {
+  background: var(--color-navbar);
+  color: var(--color-foreground);
+  border-color: var(--color-border);
+}
+
+.surface-card {
+  background: var(--color-card);
+  color: var(--color-foreground);
+  border-color: var(--color-border);
+}
+
+/* Header flyouts (notifications, profile) — solid, readable over page content */
+.header-flyout-panel {
+  background-color: var(--color-card);
+  color: var(--color-foreground);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+}
+
+html.light .header-flyout-panel {
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+}
+
+/* Jobs filters modal — always opaque */
+.jobs-filters-panel {
+  background-color: var(--color-card);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+html.light .jobs-filters-panel {
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+}
+
+.jobs-filters-panel label {
+  color: var(--color-muted-foreground);
+  font-weight: 500;
+}
+
+.jobs-filters-panel select,
+.jobs-filters-panel input {
+  background: var(--color-input);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+}
+
+html.dark .jobs-filters-panel select option,
+html.dark .jobs-filters-panel input {
+  background: #14141c;
+  color: #f8fafc;
+}
+
+html.light .jobs-filters-panel select option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Header icon buttons */
+.header-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-foreground);
+  opacity: 1;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease,
+    border-color 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  background: var(--color-muted);
+}
+
+.header-icon-btn:active {
+  transform: scale(0.96);
+}
+
+.header-icon-btn[data-active="true"] {
+  background: var(--color-muted);
+  border-color: color-mix(in oklab, var(--color-primary) 55%, var(--color-border));
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-primary) 35%, transparent);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--color-muted-foreground) 45%, transparent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--color-muted-foreground) 65%, transparent);
+}
