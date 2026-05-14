@@ -39,10 +39,7 @@ The product wraps resume intelligence, skill-gap analysis, job matching, learnin
 ```bash
 cd backend
 python -m venv venv
-# Windows
 .\venv\Scripts\activate
-# macOS / Linux
-# source venv/bin/activate
 
 pip install -r requirements.txt
 ```
@@ -63,8 +60,7 @@ npm install
 npm run dev
 ```
 
-App URL: `http://localhost:3000`  
-By default the UI calls `http://localhost:8000/api/v1` unless you override `NEXT_PUBLIC_API_URL`.
+## App URL: `https://ai-career-mentor-pksch8wh8-devoju-sai-sreekars-projects.vercel.app?_vercel_share=dfs7DrL4la0Ms6bDuNB54si6R4X3TWDr`
 
 ## Environment variables
 
@@ -72,15 +68,15 @@ By default the UI calls `http://localhost:8000/api/v1` unless you override `NEXT
 
 | Variable | Purpose |
 |----------|---------|
-| `DATABASE_URL` | SQLAlchemy URL (default SQLite path is fine for local dev) |
-| `SECRET_KEY` | Long random string for signing JWTs |
-| `GEMINI_API_KEY` | Gemini / LangChain access |
+| `DATABASE_URL` | postgresql://ai_career_db_cbdc_user:7yXXyLhnJ4xGQfp3shKeGQaPDuE4UMgk@dpg-d82adf57vvec73b4ff40-a.virginia-postgres.render.com/ai_career_db_cbdc |
+| `SECRET_KEY` | 4d819713397cce3b205d1d7c2a23b68f2b9c23c34a4af62946985f0b8ad2fabc |
+| `GEMINI_API_KEY` | AIzaSyAJF4bTl2J-DbM-WjcG87SdCZFlnwAfWTQ |
 
 ### Frontend (`frontend/.env.local`)
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_API_URL` | Public API base (optional; defaults to local FastAPI prefix above) |
+| `NEXT_PUBLIC_API_URL` | https://ai-career-mentor-l9l9.onrender.com/api/v1 |
 
 ## Folder structure
 
@@ -125,8 +121,6 @@ Place screenshots in `docs/screenshots/` (paths are placeholders until you add f
 4. Explore **Skill Gap**, **Jobs Match** (filters, save, apply), **Roadmap**, and **Mock Interviews** from the sidebar.
 5. For interviews: pick type and difficulty, press **Start Interview** or **Refresh questions**, answer by **microphone** (Chrome/Edge recommended) and/or **typed text**, then **Submit Answer** for feedback.
 
-If a seeded demo user exists in your environment, use the credentials documented in your own deployment notes (do not commit production secrets).
-
 ## Deployment
 
 ### Backend
@@ -137,7 +131,7 @@ If a seeded demo user exists in your environment, use the credentials documented
 
 ### Frontend
 
-- `npm run build` then `npm start`, or deploy to Vercel/Netlify/your host of choice.
+- `npm run build` then `npm start`, then deployed on Vercel.
 - Set `NEXT_PUBLIC_API_URL` to the public API URL.
 - Ensure HTTPS in production so browser speech and secure cookies behave as expected.
 
