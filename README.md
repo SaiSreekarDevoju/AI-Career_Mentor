@@ -103,17 +103,6 @@ ai-career-mentor/
 └── README.md
 ```
 
-## Screenshots
-
-Place screenshots in `docs/screenshots/` (paths are placeholders until you add files):
-
-| File | Suggested content |
-|------|-------------------|
-| `docs/screenshots/home.png` | Marketing home or pricing preview |
-| `docs/screenshots/dashboard.png` | Dashboard overview |
-| `docs/screenshots/resume.png` | Resume analysis |
-| `docs/screenshots/interviews.png` | Mock interview session |
-
 ## Usage
 
 1. Start the **backend**, then the **frontend**.
@@ -135,7 +124,3 @@ Place screenshots in `docs/screenshots/` (paths are placeholders until you add f
 - `npm run build` then `npm start`, then deployed on Vercel.
 - Set `NEXT_PUBLIC_API_URL` to the public API URL.
 - Ensure HTTPS in production so browser speech and secure cookies behave as expected.
-
-## License
-
-Private / all rights reserved unless you attach an explicit open-source license to your fork.
