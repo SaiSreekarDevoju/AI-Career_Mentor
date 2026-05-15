@@ -9,16 +9,68 @@ The product wraps resume intelligence, skill-gap analysis, job matching, learnin
 ## App URL: 
 https://ai-career-mentor-pksch8wh8-devoju-sai-sreekars-projects.vercel.app?_vercel_share=dfs7DrL4la0Ms6bDuNB54si6R4X3TWDr
 
+## Overview
+
+Mentoria.ai combines multiple career tools into a single platform:
+- Resume intelligence with ATS-style feedback
+- Skill gap analysis based on career goals
+- Job matching with scoring and filters
+- AI-generated learning roadmaps
+- Mock interviews with scoring and feedback
+It also includes production-grade SaaS features like authentication, session handling, and trial-based access control.
+
 ## Features
 
-- **Accounts & sessions** — Email/password auth, optional “remember me”, JWT access tokens with rotating refresh tokens stored server-side.
-- **Free trial** — Trial window stored on the user; dashboard countdown can sync to server time. After expiry, only the home pricing preview (plus login/register for account changes) remains reachable while still signed in.
-- **Resume AI** — Upload PDF/DOCX, ATS-oriented signals, structured feedback, and keyword/section insights.
-- **Skill gap** — Compares profile and goals to surfaced skill expectations.
-- **Jobs Match** — Filterable catalog (location, type, salary in INR, experience, skills, company type), match scores, save and apply flows.
-- **Roadmap** — Multi-week plans with tasks and milestones, persisted progress.
-- **Mock interviews** — Interview type and difficulty, generated questions (API with sensible timeout and offline-style fallback), voice capture via the **Web Speech API** where supported, **typed answers** when the browser blocks the mic, scoring and history.
-- **Dashboard shell** — Sidebar navigation, notifications, profile menu, pricing page for upgrades.
+## Authentication & Sessions
+- Email/password login
+- JWT-based authentication
+- Refresh token rotation
+- Secure session handling
+- optional “remember me”
+
+## Free Trial System
+- Time-based trial stored per user
+- Real-time countdown synced with backend
+- Dashboard access restricted after expiry
+- Pricing preview available post-trial
+
+## Resume AI
+- Upload PDF/DOCX resumes
+- Extract structured content
+- ATS-style evaluation
+- Keyword optimization suggestions
+- Section-wise feedback
+
+## Skill Gap Analysis
+- Compares current profile vs target role
+- Identifies missing skills
+- Provides actionable improvement insights
+
+## Jobs Match
+- Filterable catalog (location, type, salary in INR, experience, skills, company type)
+- Match scoring algorithm
+- Save and apply workflows
+
+## Roadmap
+- Multi-week plans with tasks and milestones
+- Task-based progression
+- Milestone tracking
+- Persistent user progress
+
+## Mock Interviews
+- Role-based and difficulty-based interviews
+- AI-generated questions
+- Voice input using browser Speech API
+- Typed fallback for unsupported devices
+- AI-based scoring and feedback
+- Interview history tracking
+
+## Dashboard UI
+- Sidebar navigation
+- Notifications system
+- Profile management
+- Pricing page for upgrades.
+
 - **Theming** — Light/dark theme via `data-theme` and local preference.
 
 ## Tech stack
