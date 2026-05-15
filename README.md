@@ -71,7 +71,8 @@ It also includes production-grade SaaS features like authentication, session han
 - Profile management
 - Pricing page for upgrades.
 
-- **Theming** — Light/dark theme via `data-theme` and local preference.
+## Theming
+- Only dark theme is supported
 
 ## Tech stack
 
@@ -99,7 +100,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-Create `backend/.env` (see variables below), then run:
+Create `backend/.env`, then run:
 
 ```bash
 uvicorn app.main:app --reload --port 8000
@@ -111,6 +112,7 @@ API docs: `http://localhost:8000/docs`
 
 ```bash
 cd frontend
+
 npm install
 npm run dev
 ```
@@ -176,3 +178,9 @@ ai-career-mentor/
 - `npm run build` then `npm start`, then deployed on Vercel.
 - Set `NEXT_PUBLIC_API_URL` to the public API URL.
 - Ensure HTTPS in production so browser speech and secure cookies behave as expected.
+
+## Future Improvements
+- Payment integration (Stripe/Razorpay)
+- Real-time interview simulation
+- AI-powered job application automation
+- Multi-language support
