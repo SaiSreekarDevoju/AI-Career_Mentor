@@ -69,15 +69,15 @@ npm run dev
 
 | Variable | Purpose |
 |----------|---------|
-| `DATABASE_URL` | postgresql://ai_career_db_cbdc_user:7yXXyLhnJ4xGQfp3shKeGQaPDuE4UMgk@dpg-d82adf57vvec73b4ff40-a.virginia-postgres.render.com/ai_career_db_cbdc |
-| `SECRET_KEY` | 4d819713397cce3b205d1d7c2a23b68f2b9c23c34a4af62946985f0b8ad2fabc |
-| `GEMINI_API_KEY` | AIzaSyAJF4bTl2J-DbM-WjcG87SdCZFlnwAfWTQ |
+| `DATABASE_URL` | Connection string for the database. It allows the backend (via SQLAlchemy) to connect to a PostgreSQL database and perform operations like storing users, interview history, jobs, and roadmaps. |
+| `SECRET_KEY` | Secret key used for signing and verifying authentication tokens. It ensures secure user sessions by generating and validating JSON Web Token (JWTs). |
+| `GEMINI_API_KEY` | API key for accessing Google Gemini. It is used by the AI layer (via LangChain) to generate resume feedback, interview questions, skill analysis, and learning roadmaps. |
 
 ### Frontend (`frontend/.env.local`)
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_API_URL` | https://ai-career-mentor-l9l9.onrender.com/api/v1 |
+| `NEXT_PUBLIC_API_URL` | Base URL of the backend API. The frontend (built with Next.js) uses this to send requests for authentication, resume analysis, job matching, and interview features. The NEXT_PUBLIC_ prefix allows it to be accessible in the browser. |
 
 ## Folder structure
 
