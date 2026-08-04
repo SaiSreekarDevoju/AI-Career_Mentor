@@ -11,6 +11,7 @@ from app.models.roadmap import Roadmap
 from app.core.security import get_password_hash
 
 
+
 def _ensure_sqlite_columns():
     if not str(settings.DATABASE_URL).startswith("sqlite"):
         return
