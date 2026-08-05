@@ -7,7 +7,7 @@
 The product wraps resume intelligence, skill-gap analysis, job matching, learning roadmaps, and scored mock interviews into one account. Trial users get time-limited access; when the trial ends, they are guided back to the marketing home page to **preview pricing only** until they upgrade—dashboard routes are not available in that state.
 
 ## App URL: 
-https://ai-career-mentor-pksch8wh8-devoju-sai-sreekars-projects.vercel.app?_vercel_share=dfs7DrL4la0Ms6bDuNB54si6R4X3TWDr
+Updates are underway - Link will be available soon!
 
 ## Overview
 
